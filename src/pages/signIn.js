@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Input from '../component/input';
 import Buttton from '../component/button';
+import { Link as Links  } from 'react-router-dom';
 
 function Copyright(props) {
   return (
@@ -52,7 +53,7 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -81,19 +82,18 @@ export default function SignIn() {
              <Buttton name="Sign In" />
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
-                  Forgot password?
-                </Link>
+              <Links to="/dashboard" style={{ color:'#1976d2' }}> {"Dashboard"}</Links>
               </Grid>
               <Grid item>
-                <Link href="/signup" variant="body2">
+              <Links to="/signup" style={{ color:'#1976d2' }}> {"Don't have an account? Sign Up"}</Links>
+                {/* <Link href="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
-                </Link>
+                </Link> */}
               </Grid>
             </Grid>
           </Box>
         </Box>
-        <Copyright sx={{ mt: 8, mb: 4 }} />
+      
       </Container>
     </ThemeProvider>
   );

@@ -17,7 +17,7 @@ export default function AppRouter() {
     return(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<SignIn />}></Route>
+      <Route path="/signin" element={<SignIn />}></Route>
       <Route path="/signup" element={<SignUp />}></Route>
       <Route path="/dashboard" element={<Dashboard />}></Route>
     </Routes>

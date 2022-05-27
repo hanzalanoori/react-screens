@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Input from '../component/input';
 import Buttton from '../component/button';
+import { Link as Links  } from 'react-router-dom';
 
 
 function Copyright(props) {
@@ -53,7 +54,7 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -81,30 +82,23 @@ export default function SignUp() {
               autoComplete="current-password"
              />
 
-          <Input     id="Phone"
-              label="Phone Number"
-              name="Phone Number"
-              autoComplete="Phone Number"
+       
+          <Input      name="password"
+              label="Confirm Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
              />
 
-          <Input    id="Gender"
-              label="Gender"
-              name="Gender"
-              autoComplete="Gender"
-             />
-
-
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+        
 
             <Buttton name="Sign Up" />
             <Grid container>
               <Grid item>
-                <Link href="/" variant="body2">
+              <Links to="/signin" style={{ color:'#1976d2' }} >  {"Don't have an account? Sign Up"}</Links>
+                {/* <Link href="/" variant="body2">
                   {"have an account? Sign In"}
-                </Link>
+                </Link> */}
               </Grid>
             </Grid>
           </Box>
